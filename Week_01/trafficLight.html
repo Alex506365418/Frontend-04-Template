@@ -1,0 +1,83 @@
+<style>
+  .traffic-light-box {
+    height: 300px;
+    width: 100px;
+    display: flex;
+    /* flex: 1; */
+    overflow: hidden;
+    border: 1px solid #333;
+    margin: 30px auto;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .red {
+    background: red !important;
+  }
+
+  .green {
+    background: rgb(19, 143, 8) !important;
+  }
+
+  .yellow {
+    background: rgba(255, 192, 17, 0.911) !important;
+  }
+
+  .circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: grey;
+  }
+</style>
+<div class="traffic-light-box">
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+</div>
+
+<script>
+  class trafficLight {
+    constructor() {}
+
+    async start() {
+      while (true) {
+        this.open('green')
+        await this.wait(10000)
+        this.open('yellow')
+        await this.wait(2000)
+        this.open('red')
+        await this.wait(5000)
+      }
+    }
+
+    wait(time) {
+      return new Promise((resolve, reject) => {
+        setTimeout(resolve, time)
+      })
+    }
+
+    open(color) {
+      let lightGreen = document.getElementsByClassName('circle')[2]
+      let lightYellow = document.getElementsByClassName('circle')[1]
+      let lightRed = document.getElementsByClassName('circle')[0]
+      if (color === 'green') {
+        lightGreen.classList.add('green')
+        lightYellow.classList.remove('yellow')
+        lightRed.classList.remove('red')
+
+      } else if (color === 'yellow') {
+        lightGreen.classList.remove('green')
+        lightYellow.classList.add('yellow')
+        lightRed.classList.remove('red')
+      } else {
+        lightGreen.classList.remove('green')
+        lightYellow.classList.remove('yellow')
+        lightRed.classList.add('red')
+      }
+    }
+  }
+  let ok = new trafficLight()
+  ok.start()
+</script>
