@@ -1,115 +1,41 @@
 学习笔记
 
 1. e.which
-<table>
-<tbody>
-<tr ><th>event.which属性值</th><th>对应的鼠标按钮</th></tr>
-<tr>
-<td>1</td>
-<td>鼠标左键</td>
-</tr>
-<tr>
-<td>2</td>
-<td>鼠标中键(滚轮键)</td>
-</tr>
-<tr>
-<td>3</td>
-<td>鼠标右键</td>
-</tr>
-</tbody>
-</table>
 
-<table >
-<tbody>
-<tr ><th>which属性值(或范围)</th><th>对应的输入字符</th></tr>
-<tr>
-<td>48 - 57</td>
-<td>对应字符 0 - 9</td>
-</tr>
-<tr>
-<td>65 - 90</td>
-<td>对应字符 A - Z</td>
-</tr>
-<tr>
-<td>97 - 122</td>
-<td>对应字符 a - z</td>
-</tr>
-</tbody>
-</table>
+| event\.which属性值 | 对应的鼠标按钮     |
+|-----------------|-------------|
+| 1               | 鼠标左键        |
+| 2               | 鼠标中键\(滚轮键\) |
+| 3               | 鼠标右键        |
 
-<table>
-<tbody>
-<tr class="firstRow"><th>which属性值(或范围)</th><th>对应的键盘按键</th></tr>
-<tr>
-<td>8</td>
-<td>Backspace键</td>
-</tr>
-<tr>
-<td>9</td>
-<td>Tab键</td>
-</tr>
-<tr>
-<td>13</td>
-<td>Enter键</td>
-</tr>
-<tr>
-<td>16</td>
-<td>Shift键</td>
-</tr>
-<tr>
-<td>17</td>
-<td>Ctrl键</td>
-</tr>
-<tr>
-<td>20</td>
-<td>Alt键</td>
-</tr>
-<tr>
-<td>20</td>
-<td>Caps Lock键(大小写锁定)</td>
-</tr>
-<tr>
-<td>27</td>
-<td>Esc键</td>
-</tr>
-<tr>
-<td>33 - 36</td>
-<td>对应按键 PageUp、PageDown、End、Home</td>
-</tr>
-<tr>
-<td>37 - 40</td>
-<td>对应按键 左、上、右、下(方向键)</td>
-</tr>
-<tr>
-<td>45 - 46</td>
-<td>对应按键 Insert、Delete</td>
-</tr>
-<tr>
-<td>48 - 57</td>
-<td>对应按键 0 - 9(非小键盘)</td>
-</tr>
-<tr>
-<td>65 - 90</td>
-<td>对应按键 A - Z</td>
-</tr>
-<tr>
-<td>91</td>
-<td>Windows键</td>
-</tr>
-<tr>
-<td>96 - 105</td>
-<td>对应按键 0 - 9(小键盘)</td>
-</tr>
-<tr>
-<td>106、107、109、110、111</td>
-<td>对应按键*、+、-、.、/(小键盘)</td>
-</tr>
-<tr>
-<td>112 - 123</td>
-<td>对应按键 F1 - F12</td>
-</tr>
-</tbody>
-</table>
+
+| which属性值\(或范围\) | 对应的输入字符     |
+|-----------------|-------------|
+| 48 \- 57        | 对应字符 0 \- 9 |
+| 65 \- 90        | 对应字符 A \- Z |
+| 97 \- 122       | 对应字符 a \- z |
+
+| which属性值\(或范围\)     | 对应的键盘按键                       |
+|---------------------|-------------------------------|
+| 8                   | Backspace键                    |
+| 9                   | Tab键                          |
+| 13                  | Enter键                        |
+| 16                  | Shift键                        |
+| 17                  | Ctrl键                         |
+| 20                  | Alt键                          |
+| 20                  | Caps Lock键\(大小写锁定\)           |
+| 27                  | Esc键                          |
+| 33 \- 36            | 对应按键 PageUp、PageDown、End、Home |
+| 37 \- 40            | 对应按键 左、上、右、下\(方向键\)           |
+| 45 \- 46            | 对应按键 Insert、Delete            |
+| 48 \- 57            | 对应按键 0 \- 9\(非小键盘\)           |
+| 65 \- 90            | 对应按键 A \- Z                   |
+| 91                  | Windows键                      |
+| 96 \- 105           | 对应按键 0 \- 9\(小键盘\)            |
+| 106、107、109、110、111 | 对应按键\*、\+、\-、\.、/\(小键盘\)      |
+| 112 \- 123          | 对应按键 F1 \- F12                |
+
+
 1. JavaScript exec() 方法：
    exec(string) 方法用于检索字符串中的正则表达式的匹配。必传参数 string
 
