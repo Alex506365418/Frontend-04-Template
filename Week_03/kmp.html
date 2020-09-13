@@ -1,0 +1,53 @@
+<script>
+  // KMP算法
+  // source: 被匹配的字符串   pattern: 用来匹配的项
+  function kmp(source, pattern) {
+    
+    let table = new Array(pattern.length).fill(0); 
+
+    // 计算table 可知出现不同时，该从什么位置重新匹配，而非从头开始。
+    // 比如: pattern: a b c d a b c d e , source: abcdabcdabcdex
+    //               0 0 0 0 0 0 1 2 3
+    {     
+      let i = 1,
+        j = 0
+      while (i < pattern.length) {
+        if (pattern[i] === pattern[j]) {
+          ++i
+          ++j
+          table[i] = j
+        } else {
+          if (j > 0) {
+            j = table[j]
+          } else {
+            ++i
+          }
+        }
+      }
+    }
+
+    // 判断是否能匹配上
+    {
+      let i = 0,
+        j = 0
+      while (i < source.length) {
+        if (pattern[j] === source[i]) {
+          ++i;
+          ++j;
+        } else {
+          if (j > 0) {
+            j = table[j]
+          } else {
+            ++i;
+          }
+        }
+        if (j === pattern.length) {
+          return i - pattern.length
+        }
+      }
+      return -1
+    }
+
+  }
+  console.log(kmp('hell', 'll'))
+</script>
